@@ -59,5 +59,4 @@ public class IceCreamStallTest {
         assertEquals(100000001, iceCreamStall.getNoOfFlavours());
     }
 
-
 }
