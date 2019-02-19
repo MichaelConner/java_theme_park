@@ -1,6 +1,9 @@
 package Attractions;
 
-public class Playground extends Attractions {
+import ISecurity;
+import Visitor;
+
+public class Playground extends Attractions implements ISecurity{
 
     private int noOfFirstAiders;
 
@@ -16,5 +19,11 @@ public class Playground extends Attractions {
     public void setNoOfFirstAiders(int noOfFirstAiders) {
         this.noOfFirstAiders = noOfFirstAiders;
     }
+
+    @Override
+    public boolean isAllowedTo(Visitor visitor){
+        return visitor.getAge() < 16;
+    }
+
 
 }

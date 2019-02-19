@@ -2,6 +2,6 @@ public interface ITIcketed {
 
     double defaultPrice();
 
-    double priceFor(Visitor);
+    double priceFor(Visitor visitor);
 
 }
