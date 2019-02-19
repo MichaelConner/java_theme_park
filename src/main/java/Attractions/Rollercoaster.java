@@ -1,7 +1,5 @@
 package Attractions;
 
-import Attractions.Attractions;
-
 public class Rollercoaster extends Attractions {
 
     private int maxSpeed;
