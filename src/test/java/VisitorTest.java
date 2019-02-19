@@ -1,10 +1,11 @@
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
+
 public class VisitorTest {
-    Visitor visitor;
+
+    private Visitor visitor;
 
     @Before
     public void before(){
