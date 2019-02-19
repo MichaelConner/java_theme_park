@@ -16,4 +16,5 @@ public class Playground extends Attractions {
     public void setNoOfFirstAiders(int noOfFirstAiders) {
         this.noOfFirstAiders = noOfFirstAiders;
     }
+
 }

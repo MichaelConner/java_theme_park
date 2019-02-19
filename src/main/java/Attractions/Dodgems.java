@@ -16,4 +16,5 @@ public class Dodgems extends Attractions {
     public void setNoOfCars(int noOfCars) {
         this.noOfCars = noOfCars;
     }
+
 }
