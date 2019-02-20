@@ -1,9 +1,9 @@
 package Attractions;
 
-import ISecurity;
-import Visitor;
+import Visitor.ISecurity;
+import Visitor.Visitor;
 
-public class Playground extends Attractions implements ISecurity{
+public class Playground extends Attractions implements ISecurity {
 
     private int noOfFirstAiders;
 

@@ -1,3 +1,5 @@
+package Visitor;
+
 public interface ITIcketed {
 
     double defaultPrice();

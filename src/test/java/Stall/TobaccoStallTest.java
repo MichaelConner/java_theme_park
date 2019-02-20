@@ -1,5 +1,6 @@
 package Stall;
 
+import Visitor.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -8,10 +9,15 @@ import static org.junit.Assert.assertEquals;
 public class TobaccoStallTest {
 
     private TobaccoStall tobaccoStall;
+    private Visitor visitor1;
+    private Visitor visitor2;
 
     @Before
     public void before() {
         tobaccoStall = new TobaccoStall("Smoke To See You", "Michael Conner", 1, 5);
+
+        visitor1 = new Visitor(18, 1.74, 10.00);
+        visitor2 = new Visitor(17, 1.79, 10.00);
     }
 
 
@@ -57,6 +63,16 @@ public class TobaccoStallTest {
     public void canChangeNoOfBrands() {
         tobaccoStall.setNoOfBrands(3);
         assertEquals(3, tobaccoStall.getNoOfBrands());
+    }
+
+    @Test
+    public void canCheckAge() {
+        assertEquals(true, tobaccoStall.isAllowedTo(visitor1));
+    }
+
+    @Test
+    public void canCheckAgeTooYoung() {
+        assertEquals(false, tobaccoStall.isAllowedTo(visitor2));
     }
 
 }

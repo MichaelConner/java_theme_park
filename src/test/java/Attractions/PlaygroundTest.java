@@ -1,5 +1,6 @@
 package Attractions;
 
+import Visitor.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -14,6 +15,9 @@ public class PlaygroundTest {
     @Before
     public void before() {
         playground = new Playground("Yosemite", 7);
+
+        visitor1 = new Visitor(15, 1.74, 10.00);
+        visitor2 = new Visitor(16, 1.79, 10.00);
     }
 
 
@@ -46,12 +50,7 @@ public class PlaygroundTest {
 
     @Test
     public void canCheckAgeTooOld() {
-        playground.setNoOfFirstAiders(10);
         assertEquals(false, playground.isAllowedTo(visitor2));
     }
-
-
-
-
 
 }

@@ -1,6 +1,9 @@
 package Stall;
 
-public class TobaccoStall extends Stall {
+import Visitor.ISecurity;
+import Visitor.Visitor;
+
+public class TobaccoStall extends Stall implements ISecurity {
 
     private int noOfBrands;
 
@@ -15,6 +18,11 @@ public class TobaccoStall extends Stall {
 
     public void setNoOfBrands(int noOfBrands) {
         this.noOfBrands = noOfBrands;
+    }
+
+    @Override
+    public boolean isAllowedTo(Visitor visitor){
+        return visitor.getAge() >= 18;
     }
 
 }

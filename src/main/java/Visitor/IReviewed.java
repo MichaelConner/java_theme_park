@@ -1,3 +1,5 @@
+package Visitor;
+
 public interface IReviewed {
 
     int getRating();
